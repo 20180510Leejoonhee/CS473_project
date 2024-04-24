@@ -1,4 +1,4 @@
-# CS442_project
+# CS473_project
 To connect storytellers and listeners
 
 * Project description: <https://docs.google.com/presentation/d/1ck5He7S7aAxrRV2gDvEjYkeUIz-vzYBg_Bs-oOqciZg/edit#slide=id.p>
