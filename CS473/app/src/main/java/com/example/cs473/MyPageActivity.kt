@@ -4,6 +4,8 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.view.View
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class CustomView(context: Context) : View(context) {
     private val paint = Paint()
@@ -13,7 +15,10 @@ class CustomView(context: Context) : View(context) {
         canvas.drawRect(100f, 100f, 200f, 200f, paint) // Draw a rectangle
     }
 }
-class MyPageActivity {
+class MyPageActivity : AppCompatActivity() {
 
-
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.my_page)
+    }
 }
