@@ -4,7 +4,18 @@
     <string name="My_Profile">My Profile</string>
     <string name="takes_back_to_previous_screen">takes back to previous screen</string>
     <string name="user_avatar">user avatar</string>
-    <string name="rating">Rating</string>
+    <string name="rating">Rating:</string>
     <string name="user_name">User Name</string>
+    <string name="preference_1">Preference 1</string>
+    <string name="preference_2">Preference 2</string>
+    <string name="preference_3">Preference 3</string>
+    <string name="credentials"><b>Credentials:</b>
+                               \nLorem ipsum dolor sit amet, consectetur adipiscing elit.
+                               \nFusce eget euismod risus. Vestibulum in tristique tortor.
+                               \nIn sed porta ex. Mauris vel porttitor nulla. Ut sed massa risus.
+                               \nQuisque non congue urna, et tristique augue.
+                               \nSed mauris ligula, pharetra vel lorem id, dapibus scelerisque turpis.</string>
+    <string name="y_axis">Duration of meetings</string>
+    <string name="is_the_barchart">is the barchart</string>
 
 </resources>

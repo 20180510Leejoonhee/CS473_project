@@ -11,23 +11,23 @@
 
     <ImageView
         android:id="@+id/user_avatar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
-        android:background="#090404"
-        android:backgroundTint="#000000"
+        android:background="@drawable/circle"
         android:contentDescription="@string/user_avatar"
         android:foregroundTint="#FAF6F6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header"
-        tools:ignore="ImageContrastCheck"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="ImageContrastCheck" />
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="60dp"
         android:gravity="center_vertical"
         android:text="@string/user_name"
@@ -35,7 +35,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toEndOf="@+id/user_avatar"
         app:layout_constraintTop_toTopOf="@+id/user_avatar" />
 
@@ -80,38 +80,116 @@
 
     <RatingBar
         android:id="@+id/ratingBar"
+        style="?android:attr/ratingBarStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="48dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="5"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:stepSize="1.0"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_avatar" />
 
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="42dp"
         android:gravity="center_vertical"
         android:text="@string/rating"
         android:textColor="@color/fui_bgGitHub"
         android:textSize="20sp"
-
         app:layout_constraintEnd_toStartOf="@+id/ratingBar"
-        app:layout_constraintHorizontal_bias="0.671"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user_avatar" />
 
-    <com.example.cs473.CustomView
-        android:id="@+id/custom_view"
+    <TextView
+        android:id="@+id/preference2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/preferences"
+        android:padding="5dp"
+        android:text="@string/preference_2"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/preference1" />
+
+    <TextView
+        android:id="@+id/preference1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/preferences"
+        android:padding="5dp"
+        android:text="@string/preference_1"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/user_avatar" />
+
+    <TextView
+        android:id="@+id/preference3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/preferences"
+        android:padding="5dp"
+        android:text="@string/preference_3"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintStart_toEndOf="@+id/preference2" />
+
+    <TextView
+        android:id="@+id/Credentials"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:text="@string/credentials"
+        android:textColor="@color/fui_bgGitHub"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/user_avatar"
-        app:layout_constraintTop_toBottomOf="@+id/user_name"
-        tools:view="@layout/custom_view" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.451" />
+
+    <ImageView
+        android:id="@+id/barchart"
+        android:layout_width="376dp"
+        android:layout_height="213dp"
+        android:contentDescription="@string/is_the_barchart"
+        android:scaleX="0.75"
+        android:scaleY="0.95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Credentials"
+        app:layout_constraintVertical_bias="0.284"
+        app:srcCompat="@drawable/bar_chart" />
+
+    <TextView
+        android:id="@+id/y_axis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/y_axis"
+        android:textColor="@color/fui_bgGitHub"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barchart" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
