@@ -17,5 +17,9 @@
                                \nSed mauris ligula, pharetra vel lorem id, dapibus scelerisque turpis.</string>
     <string name="y_axis">Duration of meetings</string>
     <string name="is_the_barchart">is the barchart</string>
+    <string name="menu">Menu</string>
+    <string name="chat">Chat</string>
+    <string name="history">History</string>
+    <string name="meet">Meet</string>
 
 </resources>
