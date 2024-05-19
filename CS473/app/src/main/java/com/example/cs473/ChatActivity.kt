@@ -32,7 +32,7 @@ class ChatActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         messageList = ArrayList()
-        val messageAdapter: MessageAdapter = MessageAdapter(this, messageList)
+        val messageAdapter = MessageAdapter(this, messageList)
 
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.chatRecyclerView.adapter = messageAdapter

@@ -21,5 +21,10 @@
     <string name="chat">Chat</string>
     <string name="history">History</string>
     <string name="meet">Meet</string>
+    <string name="Email">e-mail</string>
+    <string name="Password">password</string>
+    <string name="Name">name</string>
+    <string name="Login">log in</string>
+    <string name="Signup">sign up</string>
 
 </resources>

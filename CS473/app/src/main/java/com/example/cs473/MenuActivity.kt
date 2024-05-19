@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         // Setup listener for "Chat"
         findViewById<TextView>(R.id.menu_chat).setOnClickListener {
-            val intent = Intent(this, ChatActivity::class.java)
+            val intent = Intent(this, MatchActivity::class.java)
             startActivity(intent)
         }
 
