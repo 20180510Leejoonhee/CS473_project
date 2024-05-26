@@ -8,7 +8,9 @@ import android.widget.Toast
 import com.example.cs473.databinding.ActivitySignUpBinding
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.auth
+import com.google.firebase.auth.userProfileChangeRequest
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.database
 
@@ -36,17 +38,21 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun signUp(name: String, email: String, password: String) {
-        auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) {task ->
-            if (task.isSuccessful) {
-                Toast.makeText(this, "Successfully created account!", Toast.LENGTH_SHORT).show()
-                val intent = Intent(this@SignUpActivity, MainActivity::class.java)
-                startActivity(intent)
-                addUserToDatabase(name, email, auth.currentUser?.uid!!)
-            } else {
-                Toast.makeText(this, "Account creation failed...", Toast.LENGTH_SHORT).show()
-                Log.d("SignUp", "Error: ${task.exception}")
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(this, "Empty field found, account creation failed...", Toast.LENGTH_SHORT).show()
+        } else {
+            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    auth.currentUser?.updateProfile(userProfileChangeRequest { displayName = name })
+                    Toast.makeText(this, "Successfully created account!", Toast.LENGTH_SHORT).show()
+                    val intent = Intent(this@SignUpActivity, MainActivity::class.java)
+                    startActivity(intent)
+                    addUserToDatabase(name, email, auth.currentUser?.uid!!)
+                } else {
+                    Toast.makeText(this, "Account creation failed...", Toast.LENGTH_SHORT).show()
+                    Log.d("SignUp", "Error: ${task.exception}")
+                }
             }
-
         }
     }
 

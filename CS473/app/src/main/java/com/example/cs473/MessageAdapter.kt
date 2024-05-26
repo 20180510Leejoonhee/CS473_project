@@ -52,14 +52,14 @@ class MessageAdapter(private val context: Context, private val messageList: Arra
     override fun getItemViewType(position: Int): Int {
         val currentMessage = messageList[position]
 
-        return send
+        //return send
 
         // 아래 함수는 FirebaseAuth를 이용하여 로그인하였을 때 사용
-        //return if (FirebaseAuth.getInstance().currentUser?.uid.equals(currentMessage.sendId)) {
-            //send
-        //} else {
-            //receive
-        //}
+        return if (FirebaseAuth.getInstance().currentUser?.uid.equals(currentMessage.sendId)) {
+            send
+        } else {
+            receive
+        }
     }
 
     }

@@ -37,16 +37,16 @@ class ChatActivity : AppCompatActivity() {
         binding.chatRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.chatRecyclerView.adapter = messageAdapter
 
-        //receiverName = intent.getStringExtra("name").toString()
-        receiverName = "Receiver"
-        //receiverUid = intent.getStringExtra("uid").toString()
-        receiverUid = "TestingUID"
+        receiverName = intent.getStringExtra("name").toString()
+        //receiverName = "Receiver"
+        receiverUid = intent.getStringExtra("uid").toString()
+        //receiverUid = "TestingUID"
 
         auth = FirebaseAuth.getInstance()
         dbref = FirebaseDatabase.getInstance().reference
 
-        //val senderUid = auth.currentUser?.uid
-        val senderUid = "Sender"
+        val senderUid = auth.currentUser?.uid
+        //val senderUid = "Sender"
 
         val senderRoom = senderUid + receiverUid
         val receiverRoom = receiverUid + senderUid

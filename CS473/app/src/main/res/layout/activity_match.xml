@@ -1,43 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MatchActivity">
 
-    <TextView
-        android:id="@+id/select_role"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text="Choose your role!"
-        android:layout_margin="50sp"
-        android:layout_centerHorizontal="true"
-        android:textSize="25sp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/user_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/user_layout"/>
 
-    <Button
-        android:id="@+id/btn_listener"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-        android:text="Listener"
-        android:textSize="20sp"
-        android:layout_centerInParent="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/btn_talker"
-        android:layout_width="150sp"
-        android:layout_height="wrap_content"
-        android:text="Talker"
-        android:textSize="20sp"
-        android:layout_below="@id/btn_listener"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back" />
-
-</RelativeLayout>
+</LinearLayout>
