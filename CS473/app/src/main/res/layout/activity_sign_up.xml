@@ -4,19 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:contentDescription="@string/is_the_header"
+        android:src="@drawable/rectangle"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true" />
 
     <EditText
         android:id="@+id/name_edit"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/header"
         android:background="@drawable/edit_background"
         android:hint="@string/Name"
         android:inputType="textEmailAddress"
-        android:paddingStart="15dp"/>
+        android:paddingStart="15dp"
+        android:textColorHint="#4A4A4A" />
 
     <EditText
         android:id="@+id/email_edit"
@@ -24,12 +36,13 @@
         android:layout_height="50dp"
         android:layout_below="@id/name_edit"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="31dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/edit_background"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
-        android:paddingStart="15dp"/>
+        android:paddingStart="15dp"
+        android:textColorHint="#4A4A4A" />
 
     <EditText
         android:id="@+id/password_edit"
@@ -37,23 +50,49 @@
         android:layout_height="50dp"
         android:layout_below="@id/email_edit"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/edit_background"
         android:hint="@string/Password"
         android:inputType="numberPassword"
-        android:paddingStart="15dp"/>
+        android:paddingStart="15dp"
+        android:textColorHint="#4A4A4A" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sign_up_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:text="@string/SignUp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="17dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/menu_button"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/custom_transparent_drawable"
+        android:contentDescription="@string/takes_back_to_previous_screen"
+        app:srcCompat="@android:drawable/ic_menu_sort_by_size"
+        tools:ignore="VisualLintBounds"
+        android:layout_marginLeft="-9dp"
+        android:layout_marginTop="-13dp"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUp_btn"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/password_edit"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="34dp"
         android:background="@drawable/btn_background"
         android:text="@string/Signup"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"/>
-
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:backgroundTint="#DF7F00"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>

@@ -26,5 +26,11 @@
     <string name="Name">name</string>
     <string name="Login">log in</string>
     <string name="Signup">sign up</string>
+    <string name="weconnect">WeConnect</string>
+    <string name="welcome">Welcome to</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="LogIn">Log In</string>
+
+
 
 </resources>
