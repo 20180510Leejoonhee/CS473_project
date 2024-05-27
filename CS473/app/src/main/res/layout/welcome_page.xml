@@ -39,6 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/weconnect" />
 
     <Button
+        android:id="@+id/button3"
         android:layout_width="188dp"
         android:layout_height="50dp"
         android:background="@drawable/btn_background"

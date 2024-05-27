@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_margin="5dp"
-        android:background="@drawable/btn_background"
+        android:background="@drawable/edit_background_green"
         android:padding="10dp"
         android:text="보낸 메세지"
         android:textColor="@android:color/black"

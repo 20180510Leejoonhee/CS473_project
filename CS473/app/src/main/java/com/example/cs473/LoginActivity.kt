@@ -29,10 +29,10 @@ class LoginActivity : AppCompatActivity() {
             login(email, password)
         }
 
-        binding.signUpBtn.setOnClickListener {
-            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.signUpBtn.setOnClickListener {
+//            val intent = Intent(this@LoginActivity, SignUpActivity::class.java)
+//            startActivity(intent)
+//        }
     }
 
     private fun login(email: String, password: String) {
