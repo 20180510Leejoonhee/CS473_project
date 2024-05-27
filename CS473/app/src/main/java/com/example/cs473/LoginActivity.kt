@@ -36,15 +36,23 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun login(email: String, password: String) {
-        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
-            if (task.isSuccessful) {
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
-                startActivity(intent)
-                Toast.makeText(this, "Successfully logged in!", Toast.LENGTH_SHORT).show()
-                finish()
-            } else {
-                Toast.makeText(this, "Log in failed...", Toast.LENGTH_SHORT).show()
-                Log.d("Login", "Error : ${task.exception}")
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(
+                this,
+                "Empty field found, sign up failed...",
+                Toast.LENGTH_SHORT
+            ).show()
+        } else {
+            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    startActivity(intent)
+                    Toast.makeText(this, "Successfully logged in!", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Log in failed...", Toast.LENGTH_SHORT).show()
+                    Log.d("Login", "Error : ${task.exception}")
+                }
             }
         }
     }

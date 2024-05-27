@@ -28,7 +28,8 @@
         android:hint="@string/Name"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        android:textColorHint="#4A4A4A" />
+        android:textColorHint="#4A4A4A"
+        android:textColor="@android:color/black"/>
 
     <EditText
         android:id="@+id/email_edit"
@@ -42,7 +43,8 @@
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        android:textColorHint="#4A4A4A" />
+        android:textColorHint="#4A4A4A"
+        android:textColor="@android:color/black"/>
 
     <EditText
         android:id="@+id/password_edit"
@@ -56,7 +58,8 @@
         android:hint="@string/Password"
         android:inputType="numberPassword"
         android:paddingStart="15dp"
-        android:textColorHint="#4A4A4A" />
+        android:textColorHint="#4A4A4A"
+        android:textColor="@android:color/black"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/sign_up_text"
