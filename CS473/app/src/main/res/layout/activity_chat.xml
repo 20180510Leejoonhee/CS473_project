@@ -34,7 +34,8 @@
             android:hint="Write your message..."
             android:textColorHint="#4A4A4A"
             android:paddingStart="10dp"
-            android:layout_weight="85" />
+            android:layout_weight="85"
+            android:textColor="@android:color/black"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/send_btn"

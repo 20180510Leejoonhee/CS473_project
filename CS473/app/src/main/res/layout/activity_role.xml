@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RoleActivity">
+    tools:context=".RoleActivity"
+    android:background="#fff">
 
     <TextView
         android:id="@+id/select_role"
@@ -12,7 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:text="Choose your role!"
-        android:layout_margin="50sp"
+        android:textColor="#000"
+        android:layout_margin="70sp"
         android:layout_centerHorizontal="true"
         android:textSize="25sp" />
 
@@ -20,8 +22,11 @@
         android:id="@+id/btn_listener"
         android:layout_width="150sp"
         android:layout_height="wrap_content"
+        android:layout_below="@id/select_role"
         android:text="Listener"
         android:textSize="20sp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#DF7F00"
         android:layout_centerInParent="true"
         android:layout_centerHorizontal="true" />
 
@@ -31,11 +36,17 @@
         android:layout_height="wrap_content"
         android:text="Talker"
         android:textSize="20sp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#DF7F00"
+        android:layout_marginTop="15dp"
         android:layout_below="@id/btn_listener"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btn_back"
+        android:layout_margin="10dp"
+        android:background="@drawable/btn_background"
+        android:backgroundTint="#DF7F00"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back" />

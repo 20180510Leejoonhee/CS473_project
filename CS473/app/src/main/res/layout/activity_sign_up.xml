@@ -8,7 +8,7 @@
     android:background="#FFFFFF">
 
     <ImageView
-        android:id="@+id/header"
+        android:id="@+id/signup_header"
         android:layout_width="match_parent"
         android:layout_height="71dp"
         android:contentDescription="@string/is_the_header"
@@ -23,12 +23,13 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
-        android:layout_below="@id/header"
+        android:layout_below="@id/signup_header"
         android:background="@drawable/edit_background"
         android:hint="@string/Name"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        android:textColorHint="#4A4A4A" />
+        android:textColorHint="#4A4A4A"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:id="@+id/email_edit"
@@ -36,13 +37,14 @@
         android:layout_height="50dp"
         android:layout_below="@id/name_edit"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/edit_background"
         android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:paddingStart="15dp"
-        android:textColorHint="#4A4A4A" />
+        android:textColorHint="#4A4A4A"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:id="@+id/password_edit"
@@ -56,7 +58,8 @@
         android:hint="@string/Password"
         android:inputType="numberPassword"
         android:paddingStart="15dp"
-        android:textColorHint="#4A4A4A" />
+        android:textColorHint="#4A4A4A"
+        android:textColor="@android:color/black" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/sign_up_text"
@@ -88,7 +91,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/password_edit"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/btn_background"
         android:text="@string/Signup"
         android:textColor="#ffffff"
